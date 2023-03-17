@@ -59,8 +59,8 @@ window_before = driver.window_handles[1]
 driver.implicitly_wait(10)
 
 driver.execute_script('window-open("https://docs.google.com/forms/d/e/1FAIpQLSfb6Xu4DRV4gbcw0DdvhC_QykN9O4pPzaotf2N1QMUY28-qaA/viewform?usp=sf_link")')
-window_after = driver.window_handles[2]  # Declaras que esta es la ventana nueva
-driver.switch_to.window(window_after)  # La ventana nueva esta
+window_after = driver.window_handles[2]
+driver.switch_to.window(window_after)
 time.sleep(1)
 date_input = driver.find_element(By.XPATH, "//input[@type='date']").send_keys(today_date)
 

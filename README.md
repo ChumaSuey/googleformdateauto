@@ -19,6 +19,6 @@ The script will load Google chrome, open the google form (any google form) and s
 - It can be done with a lot of google forms any time as long as you specify the link in the .get parameter.
 ## Credits
 
-- Chuma
-- Nepta
-- Dany  (Testing of the script)
+- Chuma.
+- Nepta.
+- Dany  (Testing of the script).

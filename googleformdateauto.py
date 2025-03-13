@@ -4,6 +4,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from datetime import datetime
 import time
@@ -16,13 +17,15 @@ chrome_options.add_experimental_option("detach", True)
 #This Experimental function tells chrome to not close after finishing it (Selenium does it automatically)
 
 today_date = datetime.today().strftime('%m/%d/%Y')
-driver_path ="chromedriver"
+driver_path = "C:\\chromedriver\\chromedriver.exe"  # Chromedriver win64
+service = Service(driver_path)
 
 #driver_path important to set, if it doesn't work , it has to be specified.
 #strftime in python is a date function, the format may change depending on the form or date format of the user's computer.
 #This can work for one form or more c&p the correct codes (since for and whiles wouldn't do the deed)
 
-driver = webdriver.Chrome(driver_path, options=chrome_options)
+#driver = webdriver.Chrome(driver_path, options=chrome_options)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 driver.maximize_window()
 driver.implicitly_wait(10)
 #At this point it's important to specify the link of the form, it's the first and Chrome is opening, so key element to use .get
@@ -77,3 +80,6 @@ date_input = driver.find_element(By.XPATH, "//input[@type='date']").send_keys(to
 #wait = WebDriverWait(driver, 30)
 
 #This wasn't used properly but it tells the browser to wait certain time, it's an implicit wait
+
+#Update march 13 2025 : Chrome Driver is being used locally and small line changes on its use
+# gfdauto2.py is the script without any comments, just the code.

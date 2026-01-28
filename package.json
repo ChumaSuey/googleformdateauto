@@ -1,0 +1,20 @@
+{
+  "name": "googleformdateauto",
+  "version": "1.0.0",
+  "description": "Automated Google Forms date filler using Playwright",
+  "main": "googleformdateauto/gfdauto.js",
+  "scripts": {
+    "start": "node googleformdateauto/gfdauto.js",
+    "install-playwright": "npx playwright install chromium"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "google-forms"
+  ],
+  "author": "Chuma and Nepta",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

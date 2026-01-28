@@ -1,24 +1,74 @@
+# Google Forms Date Auto-Filler
 
-# Selenium-Python script : Googleformdateauto
+Automated script to fill today's date in multiple Google Forms.
 
-A brief description of what this project does and who it's for
+## 🚀 Quick Start
 
-Googleformdateauto it's a script that with the help of Selenium in Python it will find the first Date Picker and put today's date, leaving the browser open, this was a project that was solicited, but to test the waters we've made it for 3 google forms.
-## Info of what has been used
+### Prerequisites
 
-- Selenium
-- Python
-- Chrome (Chromedriver)
-- HTML, CSS and web parameters.
-## General Explanation
+- Node.js installed on your system
 
-The script will load Google chrome, open the google form (any google form) and select today's date in the date picker of the form
-## Considerations
+### Installation
 
-- This script can work with ANY google form.
-- It can be done with a lot of google forms any time as long as you specify the link in the .get parameter.
-## Credits
+1. Install dependencies:
 
-- Chuma.
-- Nepta.
-- Dany  (Testing of the script).
+```bash
+npm install
+```
+
+1. Install Playwright browsers:
+
+```bash
+npm run install-playwright
+```
+
+### Running the Script
+
+```bash
+npm start
+```
+
+Or directly:
+
+```bash
+node gfdauto.js
+```
+
+## 📝 What It Does
+
+The script automatically:
+
+1. Opens 3 Google Forms in separate tabs
+2. Fills in today's date in each form
+3. Keeps the browser open for you to review/submit
+
+## 🔧 Files
+
+### JavaScript (New)
+
+- **`gfdauto.js`** - Main Playwright script. Faster, more reliable, and doesn't require manual driver management.
+
+### Python (Legacy)
+
+The original Selenium implementations are preserved for reference:
+
+- **`googleformdateauto.py`** - Full version with comments explain the logic. Good for learning how the Selenium implementation works.
+- **`gfdauto2.py`** - Clean version without comments.
+
+## 💡 Key Features
+
+- ✅ Uses Playwright for modern browser automation
+- ✅ Async/await for clean, readable code
+- ✅ Automatically manages browser drivers
+- ✅ Keeps browser open after completion
+
+## 🐍 Python vs JavaScript
+
+The new JavaScript version replaces the Python scripts but functionality remains the same:
+
+- **Python**: Uses `selenium` + `chromedriver` (requires matching driver version)
+- **JavaScript**: Uses `playwright` (auto-manages binaries, handles multi-tabs natively)
+
+---
+
+*Created by Chuma and Nepta*

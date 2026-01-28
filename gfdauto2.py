@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from datetime import datetime
@@ -9,10 +8,9 @@ chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
 today_date = datetime.today().strftime('%m/%d/%Y')
-driver_path = "C:\\chromedriver\\chromedriver.exe"  # Ensure this path is correct
-service = Service(driver_path)
 
-driver = webdriver.Chrome(service=service, options=chrome_options)
+# Selenium 4.6+ automatically manages ChromeDriver - no manual path needed!
+driver = webdriver.Chrome(options=chrome_options)
 driver.maximize_window()
 driver.implicitly_wait(10)
 
